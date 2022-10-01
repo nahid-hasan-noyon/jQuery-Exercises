@@ -18,5 +18,9 @@ $(function () {
 	// $('.red-box').fadeToggle();
 	// ? if the box is not faded then it will fade and vice versa, on double toggle the box will appear to it's previous form.
 	// * making things invisible
-	$('.green-box').fadeTo(2000, 0);
+	// $('.green-box').fadeTo(2000, 0);
+	// * hide or show item
+	$('.blue-box').show();
+	$('.green-box').hide();
+	$('.red-box').hide(3000);
 });
