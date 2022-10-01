@@ -20,7 +20,10 @@ $(function () {
 	// * making things invisible
 	// $('.green-box').fadeTo(2000, 0);
 	// * hide or show item
-	$('.blue-box').show();
-	$('.green-box').hide();
-	$('.red-box').hide(3000);
+	// $('.blue-box').show();
+	// $('.green-box').hide();
+	// $('.red-box').hide(3000);
+
+	// * Toggle function
+	$('.blue-box').toggle();
 });
