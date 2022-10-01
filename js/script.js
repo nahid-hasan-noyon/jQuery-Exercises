@@ -9,4 +9,7 @@ $(function () {
 	// * Second Challenge
 	// $('.red-box').fadeTo(2000, 0.5);
 	// * Third Challenge
+	$('.red-box').fadeTo(2000, 0.2);
+	$('.green-box').fadeTo(2000, 0.5);
+	$('.blue-box').fadeTo(2000, 0.8);
 });
