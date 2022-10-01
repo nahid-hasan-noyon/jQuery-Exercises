@@ -9,7 +9,12 @@ $(function () {
 	// * Second Challenge
 	// $('.red-box').fadeTo(2000, 0.5);
 	// * Third Challenge
-	$('.red-box').fadeTo(2000, 0.2);
-	$('.green-box').fadeTo(2000, 0.5);
-	$('.blue-box').fadeTo(2000, 0.8);
+	// $('.red-box').fadeTo(2000, 0.2);
+	// $('.green-box').fadeTo(2000, 0.5);
+	// $('.blue-box').fadeTo(2000, 0.8);
+	// * fadeToggle
+	$('.red-box').fadeToggle();
+	$('.red-box').fadeToggle(1000);
+	$('.red-box').fadeToggle();
+	// ? if the box is not faded then it will fade and vice versa, on double toggle the box will appear to it's previous form.
 });
