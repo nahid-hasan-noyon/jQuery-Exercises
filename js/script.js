@@ -5,4 +5,5 @@ $(function () {
 	$('.red-box').fadeOut(2000);
 	$('.green-box').fadeOut(2000);
 	$('.red-box').fadeIn(2000);
+	$('.red-box').fadeTo(2000, 0.5);
 });
