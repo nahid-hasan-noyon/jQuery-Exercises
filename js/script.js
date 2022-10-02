@@ -53,12 +53,23 @@ $(function () {
 	// 	'linear'
 	// );
 	// * Seventh Challenge
+	// $('.blue-box').animate(
+	// 	{
+	// 		'margin-left': '100px',
+	// 	},
+	// 	1000,
+	// 	'linear'
+	// );
+	// $('.blue-box').animate({ 'margin-left': '-=100px' }, 2000, 'linear');
+	// * Custom animation
 	$('.blue-box').animate(
 		{
-			'margin-left': '100px',
+			marginLeft: '200px',
+			opacity: 0,
+			height: '50px',
+			width: ' 50px',
+			marginTop: '25px',
 		},
-		1000,
-		'linear'
+		2000
 	);
-	$('.blue-box').animate({ 'margin-left': '-=100px' }, 2000, 'linear');
 });
