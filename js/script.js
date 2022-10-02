@@ -83,9 +83,11 @@ $(function () {
 	// $('.blue-box').fadeOut(1000);
 	// $('.blue-box').delay(2000).fadeIn(2000);
 	// * Timing animation using callback function
-	$('.red-box').fadeTo(1000, 0.5, function () {
-		$('.green-box').fadeTo(1000, 0.5, function () {
-			$('.blue-box').fadeTo(1000, 0.5);
-		});
-	});
+	// $('.red-box').fadeTo(1000, 0.5, function () {
+	// 	$('.green-box').fadeTo(1000, 0.5, function () {
+	// 		$('.blue-box').fadeTo(1000, 0.5);
+	// 	});
+	// });
+	// * showing log in container
+	$('.lightbox').delay(1000).fadeIn(1000);
 });
