@@ -36,20 +36,29 @@ $(function () {
 	// * slideToggle
 	// $('.blue-box').slideToggle(3000);
 	// * Moving element
-	$('.red-box').animate({
-		'margin-left': '100px',
-	});
-	$('.green-box').animate(
-		{
-			'margin-left': '100px',
-		},
-		2000
-	);
+	// $('.red-box').animate({
+	// 	'margin-left': '100px',
+	// });
+	// $('.green-box').animate(
+	// 	{
+	// 		'margin-left': '100px',
+	// 	},
+	// 	2000
+	// );
+	// $('.blue-box').animate(
+	// 	{
+	// 		'margin-left': '100px',
+	// 	},
+	// 	2000,
+	// 	'linear'
+	// );
+	// * Seventh Challenge
 	$('.blue-box').animate(
 		{
 			'margin-left': '100px',
 		},
-		2000,
+		1000,
 		'linear'
 	);
+	$('.blue-box').animate({ 'margin-left': '-=100px' }, 2000, 'linear');
 });
