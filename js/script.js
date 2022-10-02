@@ -34,5 +34,22 @@ $(function () {
 	// $('p').hide();
 	// $('p').slideDown(3000);
 	// * slideToggle
-	$('.blue-box').slideToggle(3000);
+	// $('.blue-box').slideToggle(3000);
+	// * Moving element
+	$('.red-box').animate({
+		'margin-left': '100px',
+	});
+	$('.green-box').animate(
+		{
+			'margin-left': '100px',
+		},
+		2000
+	);
+	$('.blue-box').animate(
+		{
+			'margin-left': '100px',
+		},
+		2000,
+		'linear'
+	);
 });
