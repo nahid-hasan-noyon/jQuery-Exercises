@@ -80,6 +80,12 @@ $(function () {
 	// 	1000
 	// );
 	// * Delaying and chaining a task
-	$('.blue-box').fadeOut(1000);
-	$('.blue-box').delay(2000).fadeIn(2000);
+	// $('.blue-box').fadeOut(1000);
+	// $('.blue-box').delay(2000).fadeIn(2000);
+	// * Timing animation using callback function
+	$('.red-box').fadeTo(1000, 0.5, function () {
+		$('.green-box').fadeTo(1000, 0.5, function () {
+			$('.blue-box').fadeTo(1000, 0.5);
+		});
+	});
 });
