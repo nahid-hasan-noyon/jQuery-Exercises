@@ -28,6 +28,9 @@ $(function () {
 	// * slideUp function
 	// $('.blue-box').slideUp(5000);
 	// * Fifth Challenge
-	$('.blue-box').slideUp(3000);
-	$('.blue-box').slideDown(2000);
+	// $('.blue-box').slideUp(3000);
+	// $('.blue-box').slideDown(2000);
+	// * Sixth Challenge
+	$('p').hide();
+	$('p').slideDown(3000);
 });
