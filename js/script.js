@@ -62,14 +62,21 @@ $(function () {
 	// );
 	// $('.blue-box').animate({ 'margin-left': '-=100px' }, 2000, 'linear');
 	// * Custom animation
-	$('.blue-box').animate(
+	// $('.blue-box').animate(
+	// 	{
+	// 		marginLeft: '200px',
+	// 		opacity: 0,
+	// 		height: '50px',
+	// 		width: ' 50px',
+	// 		marginTop: '25px',
+	// 	},
+	// 	2000
+	// );
+	// * Eighth Challenge
+	$('p').animate(
 		{
-			marginLeft: '200px',
-			opacity: 0,
-			height: '50px',
-			width: ' 50px',
-			marginTop: '25px',
+			fontSize: '20px',
 		},
-		2000
+		1000
 	);
 });
