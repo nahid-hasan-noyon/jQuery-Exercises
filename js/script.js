@@ -31,6 +31,8 @@ $(function () {
 	// $('.blue-box').slideUp(3000);
 	// $('.blue-box').slideDown(2000);
 	// * Sixth Challenge
-	$('p').hide();
-	$('p').slideDown(3000);
+	// $('p').hide();
+	// $('p').slideDown(3000);
+	// * slideToggle
+	$('.blue-box').slideToggle(3000);
 });
