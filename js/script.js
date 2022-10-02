@@ -23,7 +23,8 @@ $(function () {
 	// $('.blue-box').show();
 	// $('.green-box').hide();
 	// $('.red-box').hide(3000);
-
 	// * Toggle function
-	$('.blue-box').toggle();
+	// $('.blue-box').toggle();
+	// * slideUp function
+	$('.blue-box').slideUp(5000);
 });
