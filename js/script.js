@@ -73,10 +73,13 @@ $(function () {
 	// 	2000
 	// );
 	// * Eighth Challenge
-	$('p').animate(
-		{
-			fontSize: '20px',
-		},
-		1000
-	);
+	// $('p').animate(
+	// 	{
+	// 		fontSize: '20px',
+	// 	},
+	// 	1000
+	// );
+	// * Delaying and chaining a task
+	$('.blue-box').fadeOut(1000);
+	$('.blue-box').delay(2000).fadeIn(2000);
 });
