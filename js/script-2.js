@@ -11,5 +11,7 @@ $(function () {
 	// * css selector on multiple elements at once
 	// $('h2, p, input, #list').css('background-color', 'rgba(180,180,30,0.8');
 	// * css selector on child element
-	$('p:first').css('background-color', 'rgba(180,180,30,0.8');
+	// $('p:first').css('background-color', 'rgba(180,180,30,0.8');
+	// * css selector on multiple child element at once
+	$('li:odd, input:text ').css('background-color', 'rgba(180,180,30,0.8');
 });
