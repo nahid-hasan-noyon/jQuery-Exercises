@@ -9,5 +9,7 @@ $(function () {
 	// // specify by type of and element
 	// $('input[type="text"]').css('background-color', 'rgba(180,180,30,0.8');
 	// * css selector on multiple elements at once
-	$('h2, p, input, #list').css('background-color', 'rgba(180,180,30,0.8');
+	// $('h2, p, input, #list').css('background-color', 'rgba(180,180,30,0.8');
+	// * css selector on child element
+	$('p:first').css('background-color', 'rgba(180,180,30,0.8');
 });
