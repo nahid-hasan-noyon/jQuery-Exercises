@@ -39,17 +39,19 @@ $(function () {
 	// 	.css('background-color', 'rgba(180,180,30,0.8');
 	////
 	// * filtering with jQuery
-	$('#list')
-		.children('li')
-		.filter(':even')
-		.css('background-color', 'rgba(180,180,30,0.8');
+	// $('#list')
+	// 	.children('li')
+	// 	.filter(':even')
+	// 	.css('background-color', 'rgba(180,180,30,0.8');
 	// ? list is finding its direct child and checking if it is even numbered
-	$('li')
-		.filter(function (index) {
-			return index % 3 === 1;
-		})
-		.css('background-color', 'rgba(180,180,30,0.8');
+	// $('li')
+	// 	.filter(function (index) {
+	// 		return index % 3 === 1;
+	// 	})
+	// 	.css('background-color', 'rgba(180,180,30,0.8');
 	// ? li checking its children's index in gives a reminder of 1 if divided by 3
-	$('li').first().css('background-color', 'rgba(180,180,30,0.8');
+	// $('li').first().css('background-color', 'rgba(180,180,30,0.8');
 	// ? selects the first li in the page
+	$('li').last().css('background-color', 'rgba(180,180,30,0.8');
+	// ? selects the last li in the page
 });
