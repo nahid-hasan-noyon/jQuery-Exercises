@@ -52,11 +52,18 @@ $(function () {
 	// ? li checking its children's index in gives a reminder of 1 if divided by 3
 	// $('li').first().css('background-color', 'rgba(180,180,30,0.8');
 	// ? selects the first li in the page
-	$('li').last().css('background-color', 'rgba(180,180,30,0.8');
+	// $('li').last().css('background-color', 'rgba(180,180,30,0.8');
 	// ? selects the last li in the page
 	// *Selection an element directly
 	// ? eq is used to locate the selected elements directly
-	$('li').eq(0).css('background-color', 'rgba(180,180,30,0.8');
-	$('li').eq(5).css('background-color', 'rgba(180,180,30,0.8');
-	$('li').eq(-2).css('background-color', 'rgba(180,180,30,0.8');
+	// $('li').eq(0).css('background-color', 'rgba(180,180,30,0.8');
+	// $('li').eq(5).css('background-color', 'rgba(180,180,30,0.8');
+	// $('li').eq(-2).css('background-color', 'rgba(180,180,30,0.8');
+	$('li')
+		.not(function (index) {
+			console.log(index);
+			return index % 3 === 1;
+		})
+		.css('background-color', 'rgba(180,180,30,0.8');
+	// ? not is used to ignore a specific element to select.
 });
