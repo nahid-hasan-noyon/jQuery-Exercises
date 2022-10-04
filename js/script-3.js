@@ -17,7 +17,12 @@ $(function () {
 	// });
 	////
 	// * Replacing element and content
-	$('ul li li').replaceWith(function () {
-		return '<li>replacedWith</li>';
-	});
+	// $('ul li li').replaceWith(function () {
+	// 	return '<li>replacedWith</li>';
+	// });
+	var firstListItem = $('li:first');
+	$('p:first').replaceWith(firstListItem);
+	// ? it will replace the first paragraph with li first
+	$('p').replaceWith(firstListItem);
+	// ? it with clone first li to every paragraph.
 });
