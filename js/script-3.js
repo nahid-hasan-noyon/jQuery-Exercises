@@ -12,7 +12,12 @@ $(function () {
 	// * adding element before an element
 	// $('.blue-box').before('<div class="blue-box">Before Blue</div>');
 	// * adding new element using function in before
-	$('.blue-box').before(function () {
-		return '<div class="blue-box">Before Blue</div>';
+	// $('.blue-box').before(function () {
+	// 	return '<div class="blue-box">Before Blue</div>';
+	// });
+	////
+	// * Replacing element and content
+	$('ul li li').replaceWith(function () {
+		return '<li>replacedWith</li>';
 	});
 });
