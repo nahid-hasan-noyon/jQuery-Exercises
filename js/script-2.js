@@ -54,4 +54,9 @@ $(function () {
 	// ? selects the first li in the page
 	$('li').last().css('background-color', 'rgba(180,180,30,0.8');
 	// ? selects the last li in the page
+	// *Selection an element directly
+	// ? eq is used to locate the selected elements directly
+	$('li').eq(0).css('background-color', 'rgba(180,180,30,0.8');
+	$('li').eq(5).css('background-color', 'rgba(180,180,30,0.8');
+	$('li').eq(-2).css('background-color', 'rgba(180,180,30,0.8');
 });
