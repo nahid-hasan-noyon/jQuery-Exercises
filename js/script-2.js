@@ -14,6 +14,7 @@ $(function () {
 	// $('p:first').css('background-color', 'rgba(180,180,30,0.8');
 	// * css selector on multiple child element at once
 	// $('li:odd, input:text ').css('background-color', 'rgba(180,180,30,0.8');
+	////
 	// * Traversing with jQuery
 	// $('#list').find('li').css('background-color', 'rgba(180,180,30,0.8');
 	// ? find will access all the li inside list
@@ -31,4 +32,16 @@ $(function () {
 	// ? prev will selcet the previous element
 	// $('#list').next().css('background-color', 'rgba(180,180,30,0.8');
 	// ? next will selcet the next element
+	// * Ninth Challenge
+	// $(':header').next().css('background-color', 'rgba(180,180,30,0.8');
+	// $('form')
+	// 	.find('input[type="password"]')
+	// 	.css('background-color', 'rgba(180,180,30,0.8');
+	////
+	// * filtering with jQuery
+	$('#list')
+		.children('li')
+		.filter(':even')
+		.css('background-color', 'rgba(180,180,30,0.8');
+	// ? list is finding its direct child and checking if it is even numbered
 });
