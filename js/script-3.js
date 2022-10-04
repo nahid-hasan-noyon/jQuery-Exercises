@@ -20,9 +20,13 @@ $(function () {
 	// $('ul li li').replaceWith(function () {
 	// 	return '<li>replacedWith</li>';
 	// });
-	var firstListItem = $('li:first');
-	$('p:first').replaceWith(firstListItem);
+	// var firstListItem = $('li:first');
+	// $('p:first').replaceWith(firstListItem);
 	// ? it will replace the first paragraph with li first
-	$('p').replaceWith(firstListItem);
+	// $('p').replaceWith(firstListItem);
 	// ? it with clone first li to every paragraph.
+	// * Eleventh Challenge
+	$('.red-box , .blue-box').replaceWith(function () {
+		return '<div class="green-box">New Blue</div>';
+	});
 });
