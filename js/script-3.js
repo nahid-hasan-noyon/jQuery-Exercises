@@ -26,7 +26,11 @@ $(function () {
 	// $('p').replaceWith(firstListItem);
 	// ? it with clone first li to every paragraph.
 	// * Eleventh Challenge
-	$('.red-box , .blue-box').replaceWith(function () {
-		return '<div class="green-box">New Blue</div>';
-	});
+	// $('.red-box , .blue-box').replaceWith(function () {
+	// 	return '<div class="green-box">New Blue</div>';
+	// });
+	// * using alternative method
+	$('<div class="green-box">New Blue</div>').replaceAll(
+		'.red-box , .blue-box'
+	);
 });
