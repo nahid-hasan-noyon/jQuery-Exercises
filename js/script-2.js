@@ -50,4 +50,6 @@ $(function () {
 		})
 		.css('background-color', 'rgba(180,180,30,0.8');
 	// ? li checking its children's index in gives a reminder of 1 if divided by 3
+	$('li').first().css('background-color', 'rgba(180,180,30,0.8');
+	// ? selects the first li in the page
 });
