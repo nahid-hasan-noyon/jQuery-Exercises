@@ -37,5 +37,8 @@ $(function () {
 	// * Removing Element and Content
 	// $('li').remove();
 	// * twelfth Challenge
-	$('form').children().not('input:text, textarea, br').remove();
+	// $('form').children().not('input:text, textarea, br').remove();
+	var detachedListItem = $('ul:first').detach();
+	$('#content').append(detachedListItem);
+	// ? element is detached from the page but if is stored in a variable then it can be append or prepend in anywhere.
 });
