@@ -41,8 +41,15 @@ $(function () {
 	// var detachedListItem = $('ul:first').detach();
 	// $('#content').append(detachedListItem);
 	// ? element is detached from the page but if is stored in a variable then it can be append or prepend in anywhere.
-	$('p:first').empty();
+	// $('p:first').empty();
 	// ? inside the p tag everything will be removed on page load.
 	// * 13th Challenge
-	$('.red-box, .blue-box, .green-box ').empty();
+	// $('.red-box, .blue-box, .green-box ').empty();
+	////
+	// * Manipulating Attributes and Properties - attr(), prop(), val()
+	var specialLink = $('#special-link');
+	console.log(specialLink.attr('href'));
+	// ? checking the value of that link.
+	console.log(specialLink.attr('title'));
+	// ? undefined things will show undefined
 });
