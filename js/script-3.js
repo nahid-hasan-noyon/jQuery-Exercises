@@ -30,7 +30,10 @@ $(function () {
 	// 	return '<div class="green-box">New Blue</div>';
 	// });
 	// * using alternative method
-	$('<div class="green-box">New Blue</div>').replaceAll(
-		'.red-box , .blue-box'
-	);
+	// $('<div class="green-box">New Blue</div>').replaceAll(
+	// 	'.red-box , .blue-box'
+	// );
+	////
+	// * Removing Element and Content
+	$('li').remove();
 });
