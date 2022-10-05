@@ -47,11 +47,14 @@ $(function () {
 	// $('.red-box, .blue-box, .green-box ').empty();
 	////
 	// * Manipulating Attributes and Properties - attr(), prop(), val()
-	var specialLink = $('#special-link');
-	console.log(specialLink.attr('href'));
+	// var specialLink = $('#special-link');
+	// console.log(specialLink.attr('href'));
 	// ? checking the value of that link.
-	console.log(specialLink.attr('title'));
+	// console.log(specialLink.attr('title'));
 	// ? undefined things will show undefined
-	specialLink.attr('href', 'https://en.wikipedia.org/');
+	// specialLink.attr('href', 'https://en.wikipedia.org/');
 	// ? giving double parameter will first select that attribute then change its value as the second parameter.
+	var checkedBox = $('input:checkbox');
+	console.log(checkedBox.prop('checked'));
+	// ? prop method is only those who have e fixed value or meaning, like required, checked, etc.
 });
