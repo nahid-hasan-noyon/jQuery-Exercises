@@ -43,4 +43,6 @@ $(function () {
 	// ? element is detached from the page but if is stored in a variable then it can be append or prepend in anywhere.
 	$('p:first').empty();
 	// ? inside the p tag everything will be removed on page load.
+	// * 13th Challenge
+	$('.red-box, .blue-box, .green-box ').empty();
 });
