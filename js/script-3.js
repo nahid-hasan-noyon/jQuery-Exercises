@@ -54,7 +54,15 @@ $(function () {
 	// ? undefined things will show undefined
 	// specialLink.attr('href', 'https://en.wikipedia.org/');
 	// ? giving double parameter will first select that attribute then change its value as the second parameter.
-	var checkedBox = $('input:checkbox');
-	console.log(checkedBox.prop('checked'));
+	// var checkedBox = $('input:checkbox');
+	// console.log(checkedBox.prop('checked'));
 	// ? prop method is only those who have e fixed value or meaning, like required, checked, etc.
+	var textInput = $('input:text');
+	console.log(textInput.val());
+	// ? printing the previous value set on input box
+	textInput.val('Daya');
+	// ? changing the value of input box
+
+	var rangeInput = $('input[type="range"]');
+	console.log(rangeInput.val());
 });
