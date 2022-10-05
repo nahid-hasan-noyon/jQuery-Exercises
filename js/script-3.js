@@ -57,12 +57,29 @@ $(function () {
 	// var checkedBox = $('input:checkbox');
 	// console.log(checkedBox.prop('checked'));
 	// ? prop method is only those who have e fixed value or meaning, like required, checked, etc.
-	var textInput = $('input:text');
-	console.log(textInput.val());
+	// var textInput = $('input:text');
+	// console.log(textInput.val());
 	// ? printing the previous value set on input box
-	textInput.val('Daya');
+	// textInput.val('Daya');
 	// ? changing the value of input box
+	// var rangeInput = $('input[type="range"]');
+	// console.log(rangeInput.val());
+	////
+	var galleryImage = $('.gallery').find('img').first();
+	var images = [
+		'images/laptop-mobile_small.jpg',
+		'images/laptop-on-table_small.jpg',
+		'images/people-office-group-team_small.jpg',
+	];
 
-	var rangeInput = $('input[type="range"]');
-	console.log(rangeInput.val());
+	var i = 0;
+	// ? setInterval is a javascript method
+	setInterval(function () {
+		i = (i + 1) % images.length;
+		galleryImage.fadeOut(function () {
+			galleryImage.attr('src', images[i]);
+			$(this).fadeIn();
+			// ? inside of any selected elements function this keyword can used to refer it.
+		});
+	}, 2000);
 });
