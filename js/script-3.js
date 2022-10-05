@@ -38,7 +38,9 @@ $(function () {
 	// $('li').remove();
 	// * twelfth Challenge
 	// $('form').children().not('input:text, textarea, br').remove();
-	var detachedListItem = $('ul:first').detach();
-	$('#content').append(detachedListItem);
+	// var detachedListItem = $('ul:first').detach();
+	// $('#content').append(detachedListItem);
 	// ? element is detached from the page but if is stored in a variable then it can be append or prepend in anywhere.
+	$('p:first').empty();
+	// ? inside the p tag everything will be removed on page load.
 });
