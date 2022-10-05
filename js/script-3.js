@@ -35,5 +35,7 @@ $(function () {
 	// );
 	////
 	// * Removing Element and Content
-	$('li').remove();
+	// $('li').remove();
+	// * twelfth Challenge
+	$('form').children().not('input:text, textarea, br').remove();
 });
