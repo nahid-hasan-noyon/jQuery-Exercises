@@ -31,8 +31,12 @@ $(function () {
 	});
 	////
 	// * Adding, removing and changing CSS Classes
-	$('a').addClass('fancy-link');
+	// $('a').addClass('fancy-link');
 	// ? adding single class to an element
-	$('p:first').addClass('large emphasize');
+	// $('p:first').addClass('large emphasize');
 	// ? adding multiple class after space to an element.
+	$('li li').addClass(function (index) {
+		$(this).addClass('item-' + index);
+		//// see the class names on console log
+	});
 });
