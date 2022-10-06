@@ -29,4 +29,8 @@ $(function () {
 	redBox.css('user-select', function () {
 		return 'none';
 	});
+	////
+	// * Adding, removing and changing CSS Classes
+	$('a').addClass('fancy-link');
+	// ? adding single class to an element
 });
