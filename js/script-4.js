@@ -7,36 +7,46 @@ $(function () {
 	// $('.gallery').show();
 	// ? Showing a hidden or display none element
 
-	var redBox = $('.red-box');
-	console.log(redBox.css('width'));
+	// var redBox = $('.red-box');
+	// console.log(redBox.css('width'));
 	// ? getting the width of the red box
-	console.log(redBox.width());
+	// console.log(redBox.width());
 	// ? alternative way to get the width of the red box
 	// ! the width() method is not the same as the css() method because the css() method returns the width with units (px, em, etc) while the width() method returns the width without units, the width() method is a getter method while the css() method is a setter method
-	redBox.css('background-color', '#AA7700');
+	// redBox.css('background-color', '#AA7700');
 	// ? changing the background color of the red box
-	$('p').css('font-size', '18px');
+	// $('p').css('font-size', '18px');
 	// ? changing the font size of all the paragraphs
-	$('p').css('font-size', '+=2px');
+	// $('p').css('font-size', '+=2px');
 	// ? increasing the font size of all the paragraphs by 2px
-	var properties = $('p').css(['font-size', 'line-height', 'color']);
+	// var properties = $('p').css(['font-size', 'line-height', 'color']);
 	// ? getting the font size, line height, and color of all the paragraphs
-	console.log(properties);
-	console.log(properties['font-size']);
+	// console.log(properties);
+	// console.log(properties['font-size']);
 	// ? getting the font size of all the paragraphs
-	redBox.css('user-select', 'none');
+	// redBox.css('user-select', 'none');
 	// ? disabling the user from selecting the text in the red box
-	redBox.css('user-select', function () {
-		return 'none';
-	});
+	// redBox.css('user-select', function () {
+	// 	return 'none';
+	// });
 	////
 	// * Adding, removing and changing CSS Classes
 	// $('a').addClass('fancy-link');
 	// ? adding single class to an element
 	// $('p:first').addClass('large emphasize');
 	// ? adding multiple class after space to an element.
-	$('li li').addClass(function (index) {
-		$(this).addClass('item-' + index);
-		//// see the class names on console log
+	// $('li li').addClass(function (index) {
+	// 	$(this).addClass('item-' + index);
+	// 	//// see the class names on console log
+	// });
+	$('div').addClass(function (index, currentClass) {
+		if (currentClass === 'addClass') {
+			return 'red-box';
+		}
 	});
+	// ? changing the class name
+	// $('div').removeClass('red-box');
+	// ? removing the class name
+	$('.red-box').removeClass('red-box').addClass('blue-box');
+	// ? removing and adding new class at the same time.
 });
