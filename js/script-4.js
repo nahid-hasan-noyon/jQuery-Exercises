@@ -33,4 +33,6 @@ $(function () {
 	// * Adding, removing and changing CSS Classes
 	$('a').addClass('fancy-link');
 	// ? adding single class to an element
+	$('p:first').addClass('large emphasize');
+	// ? adding multiple class after space to an element.
 });
