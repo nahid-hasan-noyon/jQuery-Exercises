@@ -74,13 +74,15 @@ $(function () {
 	////
 	// * Retrieving and Changing the content of an Element
 	var firstPara = $('p:first');
-	console.log(firstPara.text());
+	// console.log(firstPara.text());
 	// ? getting the text from the first paragraph
-	firstPara.text('<strong>First Paragraph</strong>');
+	// firstPara.text('<strong>First Paragraph</strong>');
 	// ? changing the text of the first paragraph
-	console.log(firstPara.html());
+	// console.log(firstPara.html());
 	// ? getting the html from the first paragraph
-	firstPara.html('<strong>First Paragraph</strong>');
+	// firstPara.html('<strong>First Paragraph</strong>');
 	// ? changing the html of the first paragraph
 	// ! text() will only return the text of the element, while html() will return the html of the element. So to change or see the raw html written in the element, use html() method.
+	// * 15th Challenge
+	firstPara.html(firstPara.html() + '<strong>Appended Text</strong>');
 });
