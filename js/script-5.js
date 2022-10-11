@@ -89,7 +89,12 @@ $(function () {
 	// * Delegating Events -> solution
 	$('#content').on('click', 'p', function () {
 		$(this).slideUp();
+		// ! Here this refers to the paragraph that was clicked
 	});
 	// ? p is the selector for the elements that we want to add the event handler to
 	// To know more about on method syntax https://www.w3schools.com/jquery/event_on.asp
+	// * 21st Challenge
+	$('body').on('mouseenter', 'li', function () {
+		$(this).css('color', 'red');
+	});
 });
