@@ -25,7 +25,7 @@ $(function () {
 	// * Adding Mouse Enter and Mouse Leave Handler
 	// $('.blue-box').mouseenter(function () {
 	// 	$(this).stop().fadeTo(500, 0.5);
-	// ? stop() is used to stop the animation
+	// 	// ? stop() is used to stop the animation
 	// });
 	// $('.blue-box').mouseleave(function () {
 	// 	$(this).stop().fadeTo(500, 1);
@@ -42,8 +42,25 @@ $(function () {
 	// ? hover() is a combination of mouseenter() and mouseleave() like hover(mouseenter, mouseleave)
 	////
 	// * Adding the same handler for multiple events
-	$('html').on('click keydown', function () {
-		$(this).stop().fadeTo(500, 0.5);
-	});
+	// $('html').on('click keydown', function () {
+	// 	// ? on() is used to add the same handler for multiple events
+	// 	$(this).stop().fadeTo(500, 0.5);
+	// });
 	// ? keydown is used to trigger the event when any key is pressed
+	// * 19th Challenge
+	var images = [
+		'images/laptop-mobile_small.jpg',
+		'images/laptop-on-table_small.jpg',
+		'images/people-office-group-team_small.jpg',
+	];
+	$('.gallery')
+		.find('img')
+		.on('click', function () {
+			var src = $(this).attr('src');
+			var i = images.indexOf(src);
+			i = (i + 1) % images.length;
+			$(this).fadeOut(function () {
+				$(this).attr('src', images[i]).fadeIn();
+			});
+		});
 });
