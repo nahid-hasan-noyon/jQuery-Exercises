@@ -17,7 +17,15 @@ $(function () {
 	// });
 	// ! using hover is not a good idea as it will trigger the event twice
 	// * 17th Challenge
-	$('.green-box').hover(function () {
-		$(this).text('Hovered');
+	// $('.green-box').hover(function () {
+	// 	$(this).text('Hovered');
+	// });
+	// * Adding Mouse Enter and Mouse Leave Handler
+	$('.blue-box').mouseenter(function () {
+		$(this).stop().fadeTo(500, 0.5);
+		// ? stop() is used to stop the animation
+	});
+	$('.blue-box').mouseleave(function () {
+		$(this).stop().fadeTo(500, 1);
 	});
 });
