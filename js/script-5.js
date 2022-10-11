@@ -21,11 +21,21 @@ $(function () {
 	// 	$(this).text('Hovered');
 	// });
 	// * Adding Mouse Enter and Mouse Leave Handler
-	$('.blue-box').mouseenter(function () {
-		$(this).stop().fadeTo(500, 0.5);
-		// ? stop() is used to stop the animation
-	});
-	$('.blue-box').mouseleave(function () {
-		$(this).stop().fadeTo(500, 1);
-	});
+	// $('.blue-box').mouseenter(function () {
+	// 	$(this).stop().fadeTo(500, 0.5);
+	// 	// ? stop() is used to stop the animation
+	// });
+	// $('.blue-box').mouseleave(function () {
+	// 	$(this).stop().fadeTo(500, 1);
+	// });
+	// * 18th Challenge
+	$('.blue-box').hover(
+		function () {
+			$(this).stop().fadeTo(500, 0.5);
+		},
+		function () {
+			$(this).stop().fadeTo(500, 1);
+		}
+	);
+	// ? hover() is a combination of mouseenter() and mouseleave() like hover(mouseenter, mouseleave)
 });
