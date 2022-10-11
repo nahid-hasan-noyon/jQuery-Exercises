@@ -52,23 +52,35 @@ $(function () {
 	// $('.addClass').removeClass('addClass').addClass('green-box');
 	////
 	// * Changing the data of an Element
-	var gallery = $('.gallery');
-	var images = [
-		'images/laptop-mobile_small.jpg',
-		'images/laptop-on-table_small.jpg',
-		'images/people-office-group-team_small.jpg',
-	];
-	gallery.data('availableImages', images); // ? adding array of data to the gallery element
-	console.log(gallery.data('availableImages')); // ? viewing the data from the gallery element
-	gallery.data('name', 'The Awesome Gallery'); // ? adding data to the gallery element
-	console.log(gallery.data('name'));
-	console.log(gallery.data()); // ? viewing all the data from the gallery element
-	gallery.removeData('name'); // ? removing data from the gallery element
-	console.log(gallery.data('name'));
+	// var gallery = $('.gallery');
+	// var images = [
+	// 	'images/laptop-mobile_small.jpg',
+	// 	'images/laptop-on-table_small.jpg',
+	// 	'images/people-office-group-team_small.jpg',
+	// ];
+	// gallery.data('availableImages', images); // ? adding array of data to the gallery element
+	// console.log(gallery.data('availableImages')); // ? viewing the data from the gallery element
+	// gallery.data('name', 'The Awesome Gallery'); // ? adding data to the gallery element
+	// console.log(gallery.data('name'));
+	// console.log(gallery.data()); // ? viewing all the data from the gallery element
+	// gallery.removeData('name'); // ? removing data from the gallery element
+	// console.log(gallery.data('name'));
 	// ? viewing the data from the gallery element
 	// output will be undefined because the data has been removed
-	var firstPara = $('p:first');
-	console.log(firstPara.data('para_data'));
+	// var firstPara = $('p:first');
+	// console.log(firstPara.data('para_data'));
 	// ? getting the data from the first paragraph
 	// ! name of the data attribute must be in lowercase.
+	////
+	// * Retrieving and Changing the content of an Element
+	var firstPara = $('p:first');
+	console.log(firstPara.text());
+	// ? getting the text from the first paragraph
+	firstPara.text('<strong>First Paragraph</strong>');
+	// ? changing the text of the first paragraph
+	console.log(firstPara.html());
+	// ? getting the html from the first paragraph
+	firstPara.html('<strong>First Paragraph</strong>');
+	// ? changing the html of the first paragraph
+	// ! text() will only return the text of the element, while html() will return the html of the element. So to change or see the raw html written in the element, use html() method.
 });
