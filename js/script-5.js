@@ -127,4 +127,8 @@ $(function () {
 		var image = $('<img>').attr('src', source).css('width', '100%');
 		$('.lightbox').append(image).fadeIn(1000);
 	});
+	// * 22nd Challenge
+	$('.lightbox').click(function (e) {
+		$(this).stop().fadeOut();
+	});
 });
