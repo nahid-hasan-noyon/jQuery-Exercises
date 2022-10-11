@@ -82,19 +82,35 @@ $(function () {
 	// }
 	////
 	// * Adding new Events -> problem
-	$('p').on('click', function () {
-		$(this).slideUp();
-	}); // ? This will not work for newly added paragraphs
-	$('#content').append('<p>This is a dynamically added paragraph</p>');
-	// * Delegating Events -> solution
-	$('#content').on('click', 'p', function () {
-		$(this).slideUp();
-		// ! Here this refers to the paragraph that was clicked
-	});
+	// $('p').on('click', function () {
+	// 	$(this).slideUp();
+	// }); // ? This will not work for newly added paragraphs
+	// $('#content').append('<p>This is a dynamically added paragraph</p>');
+	// // * Delegating Events -> solution
+	// $('#content').on('click', 'p', function () {
+	// 	$(this).slideUp();
+	// 	// ! Here this refers to the paragraph that was clicked
+	// });
 	// ? p is the selector for the elements that we want to add the event handler to
 	// To know more about on method syntax https://www.w3schools.com/jquery/event_on.asp
 	// * 21st Challenge
-	$('body').on('mouseenter', 'li', function () {
-		$(this).css('color', 'red');
-	});
+	// $('body').on('mouseenter', 'li', function () {
+	// 	$(this).css('color', 'red');
+	// });
+	////
+	// * Passing Additional data to events
+	$('#btn-click').click(
+		{
+			user: 'Nahid',
+			domain: 'nahid.com',
+		},
+		function (e) {
+			greetUser(e.data);
+		}
+	);
+	function greetUser(userData) {
+		username = userData.user || 'Anonymous';
+		domain = userData.domain || 'example.com';
+		alert('Welcome ' + username + ' from ' + domain);
+	}
 });
