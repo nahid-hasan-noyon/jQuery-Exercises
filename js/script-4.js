@@ -39,14 +39,16 @@ $(function () {
 	// 	$(this).addClass('item-' + index);
 	// 	//// see the class names on console log
 	// });
-	$('div').addClass(function (index, currentClass) {
-		if (currentClass === 'addClass') {
-			return 'red-box';
-		}
-	});
+	// $('div').addClass(function (index, currentClass) {
+	// 	if (currentClass === 'addClass') {
+	// 		return 'red-box';
+	// 	}
+	// });
 	// ? changing the class name
 	// $('div').removeClass('red-box');
 	// ? removing the class name
-	$('.red-box').removeClass('red-box').addClass('blue-box');
+	// $('.red-box').removeClass('red-box').addClass('blue-box');
 	// ? removing and adding new class at the same time.
+	// * 14th Challenge
+	$('.addClass').removeClass('addClass').addClass('green-box');
 });
