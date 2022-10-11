@@ -114,21 +114,26 @@ $(function () {
 	// 	alert('Welcome ' + username + ' from ' + domain);
 	// }
 	// * mini Project
-	var galleryImage = $('.gallery').find('img');
-	galleryImage.css('width', '33%').css('opacity', 0.7);
-	galleryImage.mouseenter(function () {
-		$(this).stop().fadeTo(500, 1);
-	});
-	galleryImage.mouseleave(function () {
-		$(this).stop().fadeTo(500, 0.7);
-	});
-	galleryImage.click(function (e) {
-		var source = $(this).attr('src');
-		var image = $('<img>').attr('src', source).css('width', '100%');
-		$('.lightbox').append(image).fadeIn(1000);
-	});
+	// var galleryImage = $('.gallery').find('img');
+	// galleryImage.css('width', '33%').css('opacity', 0.7);
+	// galleryImage.mouseenter(function () {
+	// 	$(this).stop().fadeTo(500, 1);
+	// });
+	// galleryImage.mouseleave(function () {
+	// 	$(this).stop().fadeTo(500, 0.7);
+	// });
+	// galleryImage.click(function (e) {
+	// 	var source = $(this).attr('src');
+	// 	var image = $('<img>').attr('src', source).css('width', '100%');
+	// 	$('.lightbox').append(image).fadeIn(1000);
+	// });
 	// * 22nd Challenge
-	$('.lightbox').click(function (e) {
-		$(this).stop().fadeOut();
+	// $('.lightbox').click(function (e) {
+	// 	$(this).stop().fadeOut();
+	// });
+	// * Handling KeyDown and KeyUp events
+	$('html').keydown(function (e) {
+		console.log(e.which);
 	});
+	// ? e.which is used to get the key code of the key that was pressed
 });
