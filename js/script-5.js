@@ -136,4 +136,25 @@ $(function () {
 		console.log(e.which);
 	});
 	// ? e.which is used to get the key code of the key that was pressed
+	// * 23rd Challenge
+	$('html').keydown(function (e) {
+		if (e.which === 39) {
+			// ? ARROW_RIGHT CAN BE USED INSTEAD OF 39
+			$('.blue-box').stop().animate(
+				{
+					'margin-left': '+=20px',
+				},
+				1000
+			);
+		}
+		if (e.which === 37) {
+			// ? ARROW_LEFT CAN BE USED INSTEAD OF 37
+			$('.blue-box').stop().animate(
+				{
+					'margin-left': '-=20px',
+				},
+				1000
+			);
+		}
+	});
 });
