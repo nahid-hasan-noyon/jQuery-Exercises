@@ -70,14 +70,26 @@ $(function () {
 	// } // ? this function can be anywhere in this file even
 	// $('html').on('click keydown', logEvent);
 	// * 20th Challenge
-	var image = $('.gallery').find('img');
-	image.on('click', changeImage);
-	function changeImage() {
-		var src = $(this).attr('src');
-		var i = images.indexOf(src);
-		i = (i + 1) % images.length;
-		$(this).fadeOut(function () {
-			$(this).attr('src', images[i]).fadeIn();
-		});
-	}
+	// var image = $('.gallery').find('img');
+	// image.on('click', changeImage);
+	// function changeImage() {
+	// 	var src = $(this).attr('src');
+	// 	var i = images.indexOf(src);
+	// 	i = (i + 1) % images.length;
+	// 	$(this).fadeOut(function () {
+	// 		$(this).attr('src', images[i]).fadeIn();
+	// 	});
+	// }
+	////
+	// * Adding new Events -> problem
+	$('p').on('click', function () {
+		$(this).slideUp();
+	}); // ? This will not work for newly added paragraphs
+	$('#content').append('<p>This is a dynamically added paragraph</p>');
+	// * Delegating Events -> solution
+	$('#content').on('click', 'p', function () {
+		$(this).slideUp();
+	});
+	// ? p is the selector for the elements that we want to add the event handler to
+	// To know more about on method syntax https://www.w3schools.com/jquery/event_on.asp
 });
