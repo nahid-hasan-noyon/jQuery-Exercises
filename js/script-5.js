@@ -16,4 +16,8 @@ $(function () {
 	// 	alert('Hovered');
 	// });
 	// ! using hover is not a good idea as it will trigger the event twice
+	// * 17th Challenge
+	$('.green-box').hover(function () {
+		$(this).text('Hovered');
+	});
 });
