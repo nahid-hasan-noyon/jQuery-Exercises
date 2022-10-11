@@ -6,7 +6,6 @@ $(function () {
 	// ? alternative way to hide the element
 	// $('.gallery').show();
 	// ? Showing a hidden or display none element
-
 	// var redBox = $('.red-box');
 	// console.log(redBox.css('width'));
 	// ? getting the width of the red box
@@ -50,5 +49,26 @@ $(function () {
 	// $('.red-box').removeClass('red-box').addClass('blue-box');
 	// ? removing and adding new class at the same time.
 	// * 14th Challenge
-	$('.addClass').removeClass('addClass').addClass('green-box');
+	// $('.addClass').removeClass('addClass').addClass('green-box');
+	////
+	// * Changing the data of an Element
+	var gallery = $('.gallery');
+	var images = [
+		'images/laptop-mobile_small.jpg',
+		'images/laptop-on-table_small.jpg',
+		'images/people-office-group-team_small.jpg',
+	];
+	gallery.data('availableImages', images); // ? adding array of data to the gallery element
+	console.log(gallery.data('availableImages')); // ? viewing the data from the gallery element
+	gallery.data('name', 'The Awesome Gallery'); // ? adding data to the gallery element
+	console.log(gallery.data('name'));
+	console.log(gallery.data()); // ? viewing all the data from the gallery element
+	gallery.removeData('name'); // ? removing data from the gallery element
+	console.log(gallery.data('name'));
+	// ? viewing the data from the gallery element
+	// output will be undefined because the data has been removed
+	var firstPara = $('p:first');
+	console.log(firstPara.data('para_data'));
+	// ? getting the data from the first paragraph
+	// ! name of the data attribute must be in lowercase.
 });
