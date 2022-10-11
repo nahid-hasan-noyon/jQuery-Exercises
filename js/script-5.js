@@ -99,18 +99,32 @@ $(function () {
 	// });
 	////
 	// * Passing Additional data to events
-	$('#btn-click').click(
-		{
-			user: 'Nahid',
-			domain: 'nahid.com',
-		},
-		function (e) {
-			greetUser(e.data);
-		}
-	);
-	function greetUser(userData) {
-		username = userData.user || 'Anonymous';
-		domain = userData.domain || 'example.com';
-		alert('Welcome ' + username + ' from ' + domain);
-	}
+	// $('#btn-click').click(
+	// 	{
+	// 		user: 'Nahid',
+	// 		domain: 'nahid.com',
+	// 	},
+	// 	function (e) {
+	// 		greetUser(e.data);
+	// 	}
+	// );
+	// function greetUser(userData) {
+	// 	username = userData.user || 'Anonymous';
+	// 	domain = userData.domain || 'example.com';
+	// 	alert('Welcome ' + username + ' from ' + domain);
+	// }
+	// * mini Project
+	var galleryImage = $('.gallery').find('img');
+	galleryImage.css('width', '33%').css('opacity', 0.7);
+	galleryImage.mouseenter(function () {
+		$(this).stop().fadeTo(500, 1);
+	});
+	galleryImage.mouseleave(function () {
+		$(this).stop().fadeTo(500, 0.7);
+	});
+	galleryImage.click(function (e) {
+		var source = $(this).attr('src');
+		var image = $('<img>').attr('src', source).css('width', '100%');
+		$('.lightbox').append(image).fadeIn(1000);
+	});
 });
