@@ -19,17 +19,17 @@ $(function () {
 	// });
 	////
 	// * The Change Event
-	$('#cb').change(function () {
-		var isChecked = $(this).is(':checked');
-		if (isChecked) {
-			$(this).css('box-shadow', '0 0 5px #181');
-		} else {
-			$(this).css('box-shadow', '0 0 5px #811');
-		}
-	});
+	// $('#cb').change(function () {
+	// 	var isChecked = $(this).is(':checked');
+	// 	if (isChecked) {
+	// 		$(this).css('box-shadow', '0 0 5px #181');
+	// 	} else {
+	// 		$(this).css('box-shadow', '0 0 5px #811');
+	// 	}
+	// });
 	// * 25th Challenge
-	$('#selection').change(function () {
-		var selectedOption = $(this).find(':selected').text();
-		console.log(selectedOption);
-	});
+	// $('#selection').change(function () {
+	// 	var selectedOption = $(this).find(':selected').text();
+	// 	console.log(selectedOption);
+	// });
 });
