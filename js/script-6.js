@@ -27,4 +27,9 @@ $(function () {
 			$(this).css('box-shadow', '0 0 5px #811');
 		}
 	});
+	// * 25th Challenge
+	$('#selection').change(function () {
+		var selectedOption = $(this).find(':selected').text();
+		console.log(selectedOption);
+	});
 });
