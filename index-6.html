@@ -36,20 +36,36 @@
 				animations, manipulations, event handlers etc.
 			</p>
 			<form action="" id="form">
-				<input type="text" value="" id="name" /><br />
-				<input type="password" /><br />
-				<select name="" id="selection">
-					<option value="" disabled selected>choose ...</option>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-				</select>
+				<input
+					type="text"
+					value=""
+					id="name"
+					placeholder="Enter your name"
+				/>
+				<span id="name-feedback"></span>
 				<br />
-				<input type="range" min="1" max="10" value="6" /><br />
-				<textarea cols="30" rows="10" id="textarea"></textarea><br />
-				<input type="checkbox" name="cb" id="cb" />
-				<label for="cb">Check me</label><br />
-				<input type="submit" value="submit" /><br />
+				<input
+					type="password"
+					id="password"
+					placeholder="Enter your password"
+				/>
+				<span id="password-feedback"></span>
+				<br />
+				<input
+					id="amount"
+					type="range"
+					min="1"
+					max="9"
+					value="5"
+				/><br />
+				<textarea id="address" cols="30" rows="10"></textarea>
+				<span id="address-feedback"></span>
+				<br />
+				<input id="checkbox" type="checkbox" name="checkbox" />
+				<label for="checkbox">Check me</label>
+				<span id="checkbox-feedback"></span>
+				<br />
+				<input id="submit" type="submit" value="submit" /><br />
 			</form>
 		</div>
 		<div class="lightbox"></div>
