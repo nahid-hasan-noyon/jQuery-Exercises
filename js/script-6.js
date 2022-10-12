@@ -32,4 +32,13 @@ $(function () {
 	// 	var selectedOption = $(this).find(':selected').text();
 	// 	console.log(selectedOption);
 	// });
+	////
+	// * Handling the submit event
+	$('#form').submit(function (event) {
+		var textarea = $('#textarea');
+		if (textarea.val().trim() == '') {
+			textarea.css('box-shadow', '0 0 10px #811');
+			event.preventDefault();
+		}
+	});
 });
