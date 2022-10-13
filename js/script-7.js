@@ -36,14 +36,18 @@ $(function () {
 	////
 	// * Retrieving pokemon data from the pokeAPI
 	var pokeAPI = 'https://pokeapi.co/api/v2/pokemon/';
-	$.getJSON(pokeAPI).done(function (data) {
-		// console.log(data);
-		$.each(data.results, function (index) {
-			var pokeName =
-				this.name.charAt(0).toUpperCase() + this.name.slice(1);
-			$('<li>')
-				.text('Pokemon no.' + ++index + ' ' + pokeName)
-				.appendTo('#pokemonContainer');
+	$.getJSON(pokeAPI)
+		.done(function (data) {
+			// console.log(data);
+			$.each(data.results, function (index) {
+				var pokeName =
+					this.name.charAt(0).toUpperCase() + this.name.slice(1);
+				$('<li>')
+					.text('Pokemon no.' + ++index + ' ' + pokeName)
+					.appendTo('#pokemonContainer');
+			});
+		})
+		.always(function () {
+			console.log('Request completed');
 		});
-	});
 });
