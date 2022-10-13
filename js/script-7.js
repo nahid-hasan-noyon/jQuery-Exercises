@@ -42,9 +42,31 @@ $(function () {
 			$.each(data.results, function (index) {
 				var pokeName =
 					this.name.charAt(0).toUpperCase() + this.name.slice(1);
-				$('<li>')
-					.text('Pokemon no.' + ++index + ' ' + pokeName)
-					.appendTo('#pokemonContainer');
+				var pokeLink = $('<a>')
+					.attr('id', pokeName)
+					.attr('href', '#')
+					.append($('<strong>').text(pokeName));
+				var list = $('<li>')
+					.text('Pokemon no.' + ++index + ' ')
+					.append(pokeLink);
+				pokeLink.click(function () {
+					$.getJSON(pokeAPI + pokeName.toLowerCase())
+						.done(function (details) {
+							console.log(details);
+							var pokemonImageDIv = $('#pokemonImage');
+							pokemonImageDIv.empty();
+							pokemonImageDIv.append('<h2>' + pokeName + '</h2>');
+							$('<img>')
+								.attr('src', details.sprites.back_default)
+								.appendTo(pokemonImageDIv);
+						})
+						.fail(function (jqXHR, textStatus, errorThrown) {
+							alert('Error: ' + errorThrown);
+						});
+					event.preventDefault();
+				});
+
+				list.appendTo('#pokemonContainer');
 			});
 		})
 		.always(function () {
