@@ -59,13 +59,22 @@ $(function () {
 							$('<img>')
 								.attr('src', details.sprites.back_default)
 								.appendTo(pokemonImageDIv);
+							// * 26th Challenge
+							$('<img>')
+								.attr('src', details.sprites.back_shiny)
+								.appendTo(pokemonImageDIv);
+							$('<img>')
+								.attr('src', details.sprites.front_default)
+								.appendTo(pokemonImageDIv);
+							$('<img>')
+								.attr('src', details.sprites.front_shiny)
+								.appendTo(pokemonImageDIv);
 						})
 						.fail(function (jqXHR, textStatus, errorThrown) {
 							alert('Error: ' + errorThrown);
 						});
 					event.preventDefault();
 				});
-
 				list.appendTo('#pokemonContainer');
 			});
 		})
